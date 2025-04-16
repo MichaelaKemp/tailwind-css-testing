@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>DaisyUI Cards</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet" />
@@ -11,20 +11,35 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
       rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <style>
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
-  <body class="bg-[#F3F4F6] text-[#111827]">
+  <body class="bg-white text-[#111827]">
     <div class="min-h-screen p-8 grid grid-cols-3 gap-6">
       <div class="col-span-3 flex justify-center items-center">
         <div class="w-full max-w-xl">
-          <div class="flex">
+          <div class="join w-full">
             <input
               type="text"
               placeholder="Enter card details here (I won't steal from you)"
-              class="flex-grow border border-gray-300 rounded-l-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] shadow" />
-            <button
-              class="bg-gradient-to-r from-[#3B82F6] to-blue-700 text-white p-3 rounded-r-lg font-semibold hover:opacity-90 transition duration-300">
-              Submit
-            </button>
+              class="input input-bordered join-item w-full bg-white" />
+            <button class="btn btn-primary join-item">Submit</button>
           </div>
         </div>
       </div>
@@ -33,55 +48,57 @@
           Cards
         </h2>
         <div class="grid grid-cols-3 gap-4">
-          <div class="card bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer">
-            <div class="flex items-center justify-center text-4xl text-[#10B981] mb-2">
-              <i class="fa-solid fa-cube"></i>
+          <div class="card bg-gray-200 hadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+            <div class="card-body items-center text-center">
+              <i class="fa-solid fa-cube text-3xl text-success"></i>
+              <h3 class="card-title">Card One</h3>
+              <p class="text-sm text-gray-500 card-preview hidden">This is your card now. Take responsibility</p>
             </div>
-            <h3 class="font-semibold mb-1">Card One</h3>
-            <p class="text-sm text-gray-500 card-preview hidden">This is your card now. Take responsibility</p>
           </div>
-          <div class="card bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer">
-            <div class="flex items-center justify-center text-4xl text-[#10B981] mb-2">
-              <i class="fa-solid fa-lightbulb"></i>
+          <div class="card bg-gray-200 shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+            <div class="card-body items-center text-center">
+              <i class="fa-solid fa-lightbulb text-3xl text-success"></i>
+              <h3 class="card-title">Card Two</h3>
+              <p class="text-sm text-gray-500 card-preview hidden">Will pretend to be productive if you’re watching.</p>
             </div>
-            <h3 class="font-semibold mb-1">Card Two</h3>
-            <p class="text-sm text-gray-500 card-preview hidden">Will pretend to be productive if you’re watching.</p>
           </div>
-          <div class="card bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer">
-            <div class="flex items-center justify-center text-4xl text-[#10B981] mb-2">
-              <i class="fa-solid fa-rocket"></i>
+          <div class="card bg-gray-200 shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+            <div class="card-body items-center text-center">
+              <i class="fa-solid fa-rocket text-3xl text-success"></i>
+              <h3 class="card-title">Card Three</h3>
+              <p class="text-sm text-gray-500 card-preview hidden">This one’s trying its best. Please clap</p>
             </div>
-            <h3 class="font-semibold mb-1">Card Three</h3>
-            <p class="text-sm text-gray-500 card-preview hidden">This one’s trying its best. Please clap</p>
           </div>
-          <div class="card bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer">
-            <div class="flex items-center justify-center text-4xl text-[#10B981] mb-2">
-              <i class="fa-solid fa-star"></i>
+          <div class="card bg-gray-200 shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+            <div class="card-body items-center text-center">
+              <i class="fa-solid fa-star text-3xl text-success"></i>
+              <h3 class="card-title">Card Four</h3>
+              <p class="text-sm text-gray-500 card-preview hidden">Don't tap too hard. It's emotionally fragile.</p>
             </div>
-            <h3 class="font-semibold mb-1">Card Four</h3>
-            <p class="text-sm text-gray-500 card-preview hidden">Don't tap too hard. It's emotionally fragile.</p>
           </div>
-          <div class="card bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer">
-            <div class="flex items-center justify-center text-4xl text-[#10B981] mb-2">
-              <i class="fa-solid fa-heart"></i>
+          <div class="card bg-gray-200 shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+            <div class="card-body items-center text-center">
+              <i class="fa-solid fa-heart text-3xl text-success"></i>
+              <h3 class="card-title">Card Five</h3>
+              <p class="text-sm text-gray-500 card-preview hidden">Click for a surprise. It's disappointment.</p>
             </div>
-            <h3 class="font-semibold mb-1">Card Five</h3>
-            <p class="text-sm text-gray-500 card-preview hidden">Click for a surprise. It's disappointment.</p>
           </div>
-          <div class="card bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer">
-            <div class="flex items-center justify-center text-4xl text-[#10B981] mb-2">
-              <i class="fa-solid fa-music"></i>
+          <div class="card bg-gray-200 shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+            <div class="card-body items-center text-center">
+              <i class="fa-solid fa-music text-3xl text-success"></i>
+              <h3 class="card-title">Card Six</h3>
+              <p class="text-sm text-gray-500 card-preview hidden">Click me, I dare you. No consequences. Probably.</p>
             </div>
-            <h3 class="font-semibold mb-1">Card Six</h3>
-            <p class="text-sm text-gray-500 card-preview hidden">Click me, I dare you. No consequences. Probably.</p>
           </div>
-          <div id="secret-card" class="hidden bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer col-span-3 mt-6">
-            <div class="flex items-center justify-center text-4xl text-red-500 mb-2">
-              <i class="fa-solid fa-skull-crossbones"></i>
+          <div id="secret-card" class="hidden col-span-3">
+            <div class="card bg-base-100 shadow-lg border border-error">
+              <div class="card-body items-center text-center">
+                <i class="fa-solid fa-skull-crossbones text-4xl text-error"></i>
+                <h3 class="card-title text-white">Card Seven</h3>
+                <p class="text-sm text-white">You’ve unlocked the forbidden card. It knows too much. Put it back.</p>
+              </div>
             </div>
-            <h3 class="font-semibold mb-1">Card Seven</h3>
-            <p class="text-sm text-gray-500">You’ve unlocked the forbidden card. It knows too much. Put it back.</p>
-          </div>          
+          </div>
         </div>
       </div>
       <div>
@@ -121,35 +138,32 @@
       </div>
     </div>
     <script>
-        document.querySelectorAll('.timeline-item .marker').forEach(marker => {
-          marker.addEventListener('click', (e) => {
-            e.stopPropagation();
-            marker.classList.toggle('border-[#3B82F6]');
-            marker.classList.toggle('border-[#10B981]');
-            marker.classList.toggle('bg-[#10B981]');
-
-          });
+      document.querySelectorAll('.timeline-item .marker').forEach(marker => {
+        marker.addEventListener('click', (e) => {
+          e.stopPropagation();
+          marker.classList.toggle('border-[#3B82F6]');
+          marker.classList.toggle('border-[#10B981]');
+          marker.classList.toggle('bg-[#10B981]');
         });
+      });
+      let cardClicks = 0;
+      const secretCard = document.getElementById('secret-card');
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+          const preview = card.querySelector('.card-preview');
+          if (preview) {
+            preview.classList.toggle('hidden');
+          }
+          if (!card.dataset.clicked) {
+            card.dataset.clicked = true;
+            cardClicks++;
+          }
+          if (cardClicks === 6 && secretCard.classList.contains('hidden')) {
+            secretCard.classList.remove('hidden');
+            secretCard.classList.add('animate-fade-in');
+          }
+        });
+      });
     </script>
-    <script>
-        let cardClicks = 0;
-        const secretCard = document.getElementById('secret-card');
-        document.querySelectorAll('.card').forEach(card => {
-          card.addEventListener('click', () => {
-            const preview = card.querySelector('.card-preview');
-            if (preview) {
-              preview.classList.toggle('hidden');
-            }
-            if (!card.dataset.clicked) {
-              card.dataset.clicked = true;
-              cardClicks++;
-            }
-            if (cardClicks === 6 && secretCard.classList.contains('hidden')) {
-              secretCard.classList.remove('hidden');
-              secretCard.classList.add('animate-fade-in');
-            }
-          });
-        });
-      </script>      
   </body>
 </html>
